@@ -24,6 +24,11 @@ class TranslationServiceProvider extends ServiceProvider
             $this->publishes([
                 __DIR__ . '/../config/translation.php' => config_path('translation.php'),
             ], 'translation-config');
+
+            // Keep fixed 2022_* filenames so published migrations run early and keep stable names.
+            $this->publishes([
+                __DIR__ . '/../database/migrations' => database_path('migrations'),
+            ], 'translation-migrations');
         }
     }
 }

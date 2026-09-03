@@ -13,11 +13,12 @@
 
 ```bash
 composer require karnoweb/translation:^13.0
-php artisan vendor:publish --tag=translation-config   # اختیاری
+php artisan vendor:publish --tag=translation-config       # اختیاری
+php artisan vendor:publish --tag=translation-migrations   # الزامی
 php artisan migrate
 ```
 
-مایگریشن جدول ترجمه‌ها به‌صورت خودکار از پکیج لود می‌شود.
+مایگریشن جدول ترجمه‌ها با نام ثابت `2022_01_01_*` پابلیش می‌شود.
 
 ## قابلیت‌ها
 

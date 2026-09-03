@@ -2,11 +2,12 @@
 
 ```bash
 composer require karnoweb/translation:^13.0
-php artisan vendor:publish --tag=translation-config   # اختیاری
+php artisan vendor:publish --tag=translation-config      # اختیاری
+php artisan vendor:publish --tag=translation-migrations  # الزامی برای استفاده در میزبان
 php artisan migrate
 ```
 
-مایگریشن با تاریخ `0001_01_00_*` از خود پکیج لود می‌شود تا زود در صف migrate پروژه اجرا شود. اگر جدول از قبل وجود داشته باشد، create رد می‌شود.
+مایگریشن‌ها با تاریخ ثابت `2022_01_01_*` پابلیش می‌شوند تا زود اجرا شوند و نام فایل‌ها پایدار بماند.
 
 ```env
 TRANSLATION_TABLE=translations
